@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codops"
+version = "0.1.0"
+description = "AI-assisted CLI for developers"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [ {name = "codops"} ]
+dependencies = [
+    "click",
+    "openai>=1.0",
+]
+
+[project.optional-dependencies]
+web = ["flask"]
+
+[project.scripts]
+codops = "codops.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["codops*"]
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
