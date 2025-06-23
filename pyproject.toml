@@ -9,7 +9,7 @@ description = "AI-assisted CLI for developers"
 readme = "README.md"
 requires-python = ">=3.8"
 license = {text = "MIT"}
-authors = [ {name = "codops"} ]
+authors = [ {name = "Franck Kengne"} ]
 dependencies = [
     "click",
     "openai>=1.0",
